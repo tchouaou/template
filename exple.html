@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <LINK rel= "stylesheet"href="style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <header>
+     <div class="wrapper">
+            <h1>Travel Agency<span class="orange">.</span></h1>
+        <nav>
+           <ul class="ulref">
+                <li><a href="#main-image">Acceuil</a></li>
+                <li><a href="#steps">Destination</a></li>
+                <li><a href="#posibilities">Circuits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="navbar-burger">
+            <i class="fa fa-bars"></i>
+        </button>
+     </div>
+ </header>
+    <section id="main-image">
+        <div class="wrapper">
+          <h2><span>Organisez votre <br> <strong>voyage sur mesure</strong></span></h2>
+          <a href="#" class="button-1">par ici</a>
+        </div>
+    </section>
+    <section id="steps"> 
+        <div class="wrapper">
+            <ul>
+                <li id="step-1">
+                     <h4>planifier</h4>
+                 <p>Confiez-nous vos rêves d'évasion : en famille ou entre amis, nous trouverons la formule qui comblera vos attentes.
+                 </p>
+                </li>
+                <li id="step-2">
+                    <h4>organisez</h4>
+                    <p>Benefisiez de l`expetise de nos specialistes de chaque destination,ils vous accompagnes dans la realisation des vos voyages</p>
+                </li>
+                <li id="step-3">
+                    <h4>voyagez</h4>
+                    <p>Nous nous chargeons d`assurer votre securite et de veiller a votre serenite tout au long de votre voyage</p>
+                </li>
+            </ul>
+            <div class="clear"></div>
+    </div>
+    </section>
+    <section id="posibilities">
+         <div class="wrapper">
+            <article  style="background-image: url(logo.jpg);">
+                <div class="overlay">
+                    <h4>partez en <br>famille</h4>
+                    <p><small><i>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux !
+                    </small></i></p>
+                    <div><a href="#" class="button-2">plus d`infos</a></div>
+                </div>
+            </article>
+
+            <article  style="background-image: url(./merci.jpg);">
+                <div class="overlay">
+                    <h4>envie de<br>s`evader</h4>
+                    <p><small><i>Parfois un peu d'évasion serait le bienvenue et ferait le plus grand bien !
+                    </small></i></p>
+                    <div><a href="#" class="button-2">plus d`infos</a></div>
+                </div>
+            </article>
+             <div class="clear"></div>
+    </div>
+    </section>
+    <section id="contact">
+        <div class="wrapper">
+            <h3>contatez-nous</h3>
+            <p>Chez Travel Agency nous savons que voyager est une aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
+            <form style="text-align: center;">
+                <label for="name">NOM</label>
+                <INPUt type="text"id="NAME"PLACEHOLDER="Votre nom">    
+                     <label for="name">Email</label>
+                <input type="text"id="name"PLACEHOLDER="Votre Email">
+                <input type="submit"value="OK"class="button-3">
+        </div>
+    </section>
+    <footer> 
+        <div class="wrapper">
+            <h1>Travel Agency<span class="orange">.</span></h1>
+            <div class="copyright">Copyright © Tous droits réservés.</div>
+    </div>
+    </footer>
+    <script>
+        // Menu Hamburger
+              document.addEventListener('DOMContentLoaded', ()=> {
+              const navbarBurger = document.querySelector('.navbar-burger')
+              const navbarItems = document.querySelector('header nav')
+              
+              navbarBurger.addEventListener('click', (e)=> {
+                 navbarItems.classList.toggle('show-navbar-items')
+  
+                 if (navbarItems.classList.contains('show-navbar-items'))
+                 {
+                    navbarItems.classList.remove('navbarItems')
+                    navbarBurger.querySelector('i').classList.replace('fa-bars', 'fa-close')
+                 }
+                 else {
+                    navbarItems.classList.add('navbarItems')
+                    navbarBurger.querySelector('i').classList.replace('fa-close', 'fa-bars')
+                 }
+              })
+  
+              navbarItems.querySelectorAll('ul li').forEach(li => {
+                 li.addEventListener('click', ()=> {
+                    navbarBurger.click()
+                 })
+              })
+           })
+      </script>
+</body>
+</html>
